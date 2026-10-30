@@ -1,0 +1,11 @@
+{
+    "schema":  "RELEASEBRIDGE_PR_FREEZE_POLICY_V1",
+    "repo":  "Nimclea/releasebridge-public-beta",
+    "base_ref":  "main",
+    "protected_paths":  [
+                            {
+                                "path":  "src/shipping.js",
+                                "blob":  "71a15344db1acb6aa5c2aae57ae25945f6276a75"
+                            }
+                        ]
+}

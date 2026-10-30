@@ -23,7 +23,7 @@ try{
  git('merge-base','--is-ancestor',base,head);
  const commits=git('rev-list','--reverse',base+'..'+head).split(/\s+/).filter(Boolean);
  if(!commits.length||commits.length>100)fail('COMMIT_COUNT');
- const protectedSet=new Set(p.protected_paths.map(v=>v.path));
+ const protectedSet=new Set([...p.protected_paths.map(v=>v.path), ...['.github/workflows/releasebridge-freeze.yml','.releasebridge/verify-pr.cjs','.releasebridge/freeze-policy.json']]);
  for(const commit of commits){
   const parents=git('rev-list','--parents','-n','1',commit).split(/\s+/);
   if(parents.length!==2)fail('MERGE_COMMIT_NOT_ADMITTED');

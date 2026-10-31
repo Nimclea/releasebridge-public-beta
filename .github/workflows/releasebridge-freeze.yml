@@ -26,3 +26,5 @@ jobs:
           RB_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           RB_BASE_REF: ${{ github.event.pull_request.base.ref }}
         run: node .releasebridge/verify-pr.cjs
+
+# RB_NEGATIVE_CONTROL_DO_NOT_MERGE

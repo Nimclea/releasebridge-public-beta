@@ -33,3 +33,5 @@ try{
  }
  console.log('RELEASEBRIDGE_PR_CHECK=PASS_PROTECTED_UNIT_PRESERVED');
 }catch(e){console.error('RELEASEBRIDGE_PR_CHECK=DENY '+String(e.message||e));process.exitCode=1}
+
+// RB_NEGATIVE_CONTROL_CURRENT_MAIN_DO_NOT_MERGE
